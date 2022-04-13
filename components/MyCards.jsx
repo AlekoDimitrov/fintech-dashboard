@@ -1,4 +1,7 @@
 import React from "react";
+import { BsPlus } from "react-icons/bs";
+import { AiFillCreditCard, AiFillDollarCircle } from "react-icons/ai";
+
 import {
   Flex,
   Text,
@@ -7,6 +10,9 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  Avatar,
+  Stack,
+  AvatarGroup,
 } from "@chakra-ui/react";
 import { AiOutlineBell, AiOutlineSearch } from "react-icons/ai";
 import { FcNfcSign } from "react-icons/fc";
@@ -28,7 +34,14 @@ const MyCards = () => {
   };
 
   return (
-    <Flex w="35%" bgColor="#F5F5F5" p="3%" flexDir="column" overflow="auto">
+    <Flex
+      flex={1}
+      bgColor="#F5F5F5"
+      p="3%"
+      flexDir="column"
+      overflow="auto"
+      minH="100vh"
+    >
       <Flex justifyContent="center">
         <InputGroup backgroundColor="#ffff" borderRadius="10px" w="100%">
           <InputLeftElement
@@ -109,7 +122,7 @@ const MyCards = () => {
         {card === 3 && <Card validThru="11/22" cardNumber="3259" />}
         {card === 4 && <Card validThru="08/23" cardNumber="7472" />}
       </Flex>
-      <Flex justify="center" h="50px" align="center">
+      <Flex justify="center" h="50px" align="center" mt={5}>
         <Button
           backgroundColor={card === 1 ? "blackAlpha.700" : "blackAlpha.400"}
           h="10px"
@@ -130,6 +143,79 @@ const MyCards = () => {
           h="10px"
           onClick={() => setCard((card = 4))}
         ></Button>
+      </Flex>
+      <Flex justify="center">
+        <Flex
+          flexDir="column"
+          h="70px"
+          justify="space-between"
+          mt="15px"
+          w="90%"
+          letterSpacing="tight"
+        >
+          <Flex justify="space-between">
+            <Text>Balance</Text>
+            <Text fontWeight="bold">$140.42</Text>
+          </Flex>
+          <Flex justify="space-between">
+            <Text>Credit Limit</Text>
+            <Text fontWeight="bold">$150.00</Text>
+          </Flex>
+        </Flex>
+      </Flex>
+      <Flex flexDir="column" mt="70px">
+        <Text fontWeight="bold" fontSize="3xl" letterSpacing="wide">
+          Send Money to
+        </Text>
+        <AvatarGroup size="md" mt="20px" spacing={-2}>
+          <Avatar
+            name="Satoshi Nakamoto"
+            src="/assets/satoshi-avatar.jpg"
+          ></Avatar>
+          <Avatar name="W A" border="none"></Avatar>
+          <Avatar name="John Mcafee" src="/assets/john-avatar.jpg"></Avatar>
+          <Avatar name=""></Avatar>
+          <Avatar
+            icon={<BsPlus />}
+            cursor="pointer"
+            backgroundColor={"blackAlpha.100"}
+          ></Avatar>
+        </AvatarGroup>
+      </Flex>
+      <Flex flexDir="column" mt="50px" color={"gray.500"}>
+        <Flex flexDir="column">
+          <label>Card Number</label>
+          <InputGroup>
+            <InputLeftElement
+              pointerEvents="none"
+              children={<AiFillCreditCard />}
+            />
+            <Input placeholder="1234 5678 9101 1121" type={"number"} />
+          </InputGroup>
+        </Flex>
+        <Flex flexDir="column" mt={6}>
+          <label>Sum</label>
+          <InputGroup>
+            <InputLeftElement
+              pointerEvents="none"
+              children={<AiFillDollarCircle />}
+            />
+            <Input placeholder="130" />
+          </InputGroup>
+        </Flex>
+      </Flex>
+      <Flex w="100%">
+        <Button
+          backgroundColor={"blackAlpha.900"}
+          color={"whiteAlpha.900"}
+          mt={8}
+          w={"100%"}
+          colorScheme="black"
+          height={"60px"}
+          borderRadius={15}
+        >
+          Send Money
+        </Button>
       </Flex>
     </Flex>
   );

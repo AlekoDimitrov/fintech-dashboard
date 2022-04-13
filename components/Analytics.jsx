@@ -25,7 +25,7 @@ const Analytics = () => {
   const [display, changeDisplay] = useState("hide");
 
   return (
-    <Flex w="55%" p="3%" flexDir="column" overflow="auto" minH="100vh">
+    <Flex flex={2} p="3%" flexDir="column" overflow="auto" minH="100vh">
       <Heading fontWeight="normal" mb={4} letterSpacing="tight">
         Welcome back,{" "}
         <Flex fontWeight="bold" display="inline-flex">

@@ -10,7 +10,7 @@ import {
 const Navbar = () => {
   return (
     <Flex
-      w="15%"
+      flex={0.6}
       flexDir="column"
       alignItems="center"
       justifyContent="space-between"
