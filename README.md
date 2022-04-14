@@ -1,4 +1,4 @@
-# :fintech-dashboard (Monke.)
+# fintech-dashboard (Monke.)
 This is my first Next.js & Chakra UI project.
 
 ## Getting Started
@@ -20,4 +20,4 @@ To learn more about Next.js and Chakra UI, take a look at the following resource
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 - [Chakra UI Documentation](https://chakra-ui.com/guides/first-steps)
-- [Official Chakra UI Course](https://egghead.io/courses/build-a-modern-user-interface-with-chakra-ui-fac68106) - presente by Lazar Nikolov (core member @ Chakra UI)
+- [Official Chakra UI Course](https://egghead.io/courses/build-a-modern-user-interface-with-chakra-ui-fac68106) - presented by Lazar Nikolov (core member @ Chakra UI)
