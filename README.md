@@ -1,5 +1,5 @@
 # fintech-dashboard (Monke.)
-This is my first Next.js & Chakra UI project. Check it out here: https://fintech-dashboard-b1c289cjv-alekodimitrov.vercel.app/
+This is my first Next.js & Chakra UI project. Check out the deployed version hosted on [Vercel](https://fintech-dashboard-b1c289cjv-alekodimitrov.vercel.app/)
 
 ## Getting Started
 
