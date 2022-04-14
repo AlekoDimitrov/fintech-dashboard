@@ -18,7 +18,7 @@ const Navbar = () => {
       color="#ffff"
     >
       {/* "Monke." logo & navigation */}
-      <Flex spacedirection="row" h={[200, null, null, null]}>
+      <Flex spacedirection="row" h={[200, 200, "100%", "100%"]}>
         <Flex flexDir="column" as="nav">
           <Heading
             mt={50}
