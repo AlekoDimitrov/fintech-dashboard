@@ -45,9 +45,10 @@ const MyCards = () => {
     >
       <Flex justifyContent="center">
         <InputGroup backgroundColor="#ffff" borderRadius="10px" w="100%">
-          <InputLeftElement pointerEvents="none">
-            {<AiOutlineSearch color="gray" size="25px" />}
-          </InputLeftElement>
+          <InputLeftElement
+            pointerEvents="none"
+            children={<AiOutlineSearch color="gray" size="25px" />}
+          ></InputLeftElement>
           <Input border="none" borderRadius="10px" placeholder="Search" />
         </InputGroup>
         <IconButton
@@ -205,18 +206,20 @@ const MyCards = () => {
         <Flex flexDir="column">
           <label>Card Number</label>
           <InputGroup>
-            <InputLeftElement pointerEvents="none">
-              {<AiFillCreditCard />}
-            </InputLeftElement>
+            <InputLeftElement
+              pointerEvents="none"
+              children={<AiFillCreditCard />}
+            />
             <Input placeholder="1234 5678 9101 1121" type={"number"} />
           </InputGroup>
         </Flex>
         <Flex flexDir="column" mt={6}>
           <label>Sum</label>
           <InputGroup>
-            <InputLeftElement pointerEvents="none">
-              {<AiFillDollarCircle />}
-            </InputLeftElement>
+            <InputLeftElement
+              pointerEvents="none"
+              children={<AiFillDollarCircle />}
+            />
             <Input placeholder="130" />
           </InputGroup>
         </Flex>
