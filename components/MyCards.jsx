@@ -1,6 +1,8 @@
 import React from "react";
 import { BsPlus } from "react-icons/bs";
 import { AiFillCreditCard, AiFillDollarCircle } from "react-icons/ai";
+import { AiOutlineBell, AiOutlineSearch } from "react-icons/ai";
+import { FcNfcSign } from "react-icons/fc";
 
 import {
   Flex,
@@ -14,8 +16,7 @@ import {
   Stack,
   AvatarGroup,
 } from "@chakra-ui/react";
-import { AiOutlineBell, AiOutlineSearch } from "react-icons/ai";
-import { FcNfcSign } from "react-icons/fc";
+
 import Card from "./Card";
 import { useState } from "react";
 
@@ -35,7 +36,7 @@ const MyCards = () => {
 
   return (
     <Flex
-      flex={1}
+      w={["100%", "100%", "50%", "30%", "30%"]}
       bgColor="#F5F5F5"
       p="3%"
       flexDir="column"
@@ -95,25 +96,41 @@ const MyCards = () => {
                 letterSpacing="tight"
                 fontWeight="bold"
                 color="#ffff"
-                fontSize="3xl"
+                fontSize="2xl"
               >
                 {card === 1 && "$5,750.20"}
                 {card === 2 && "$323.15"}
                 {card === 3 && "$5"}
-                {card === 4 && "$95,000,000.05"}
+                {card === 4 && "$95K"}
               </Text>
             </Flex>
-            <Flex align="self-start" p="10px">
-              <FcNfcSign size="35px" />
-              <Text
-                ml="15px"
-                color="#ffff"
-                fontWeight="bold"
-                fontSize="2xl"
-                letterSpacing="wide"
-              >
-                Monke.
-              </Text>
+            <Flex
+              p="10px"
+              flexDir={["row", "row", "column", "column", "row"]}
+              align={"flex-start"}
+            >
+              <Flex display={["flex", "flex", "none", "none", "flex"]}>
+                <Text
+                  ml="15px"
+                  color="whiteAlpha.800"
+                  fontWeight="bold"
+                  fontSize={["2xl", "2xl", "2xl", "2lx", "2xl"]}
+                  letterSpacing="wide"
+                >
+                  Monke.
+                </Text>
+              </Flex>
+              <Flex display={["none", "none", "flex", "flex", "none"]}>
+                <Text
+                  ml="15px"
+                  color="whiteAlpha.800"
+                  fontWeight="bold"
+                  fontSize={["2xl", "2xl", "2xl", "2lx", "2xl"]}
+                  letterSpacing="wide"
+                >
+                  M.
+                </Text>
+              </Flex>
             </Flex>
           </Flex>
         </Flex>
@@ -147,10 +164,10 @@ const MyCards = () => {
       <Flex justify="center">
         <Flex
           flexDir="column"
-          h="70px"
+          h="60px"
           justify="space-between"
           mt="15px"
-          w="90%"
+          w="100%"
           letterSpacing="tight"
         >
           <Flex justify="space-between">
@@ -163,24 +180,27 @@ const MyCards = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Flex flexDir="column" mt="70px">
-        <Text fontWeight="bold" fontSize="3xl" letterSpacing="wide">
+      <Flex flexDir="column" mt="50px">
+        <Text fontWeight="bold" fontSize="2xl" letterSpacing="wide">
           Send Money to
         </Text>
-        <AvatarGroup size="md" mt="20px" spacing={-2}>
-          <Avatar
-            name="Satoshi Nakamoto"
-            src="/assets/satoshi-avatar.jpg"
-          ></Avatar>
-          <Avatar name="W A" border="none"></Avatar>
-          <Avatar name="John Mcafee" src="/assets/john-avatar.jpg"></Avatar>
-          <Avatar name=""></Avatar>
+        <Flex align={"flex-end"} w={230} justify={"space-between"}>
+          <AvatarGroup size="md" mt="10px" spacing={-2}>
+            <Avatar
+              name="Satoshi Nakamoto"
+              src="/assets/satoshi-avatar.jpg"
+            ></Avatar>
+            <Avatar name="W A" border="none"></Avatar>
+            <Avatar name="John Mcafee" src="/assets/john-avatar.jpg"></Avatar>
+            <Avatar name=""></Avatar>
+          </AvatarGroup>
           <Avatar
             icon={<BsPlus />}
             cursor="pointer"
             backgroundColor={"blackAlpha.100"}
+            border={"none"}
           ></Avatar>
-        </AvatarGroup>
+        </Flex>
       </Flex>
       <Flex flexDir="column" mt="50px" color={"gray.500"}>
         <Flex flexDir="column">

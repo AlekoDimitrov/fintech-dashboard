@@ -25,7 +25,13 @@ const Analytics = () => {
   const [display, changeDisplay] = useState("hide");
 
   return (
-    <Flex flex={2} p="3%" flexDir="column" overflow="auto" minH="100vh">
+    <Flex
+      w={["100%", "100%", "60%", "60%", "60%"]}
+      p="3%"
+      flexDir="column"
+      overflow="auto"
+      minH="100vh"
+    >
       <Heading fontWeight="normal" mb={4} letterSpacing="tight">
         Welcome back,{" "}
         <Flex fontWeight="bold" display="inline-flex">
@@ -44,7 +50,7 @@ const Analytics = () => {
           <Heading as="h2" size="lg" letterSpacing="tight" fontWeight="bold">
             Transactions
           </Heading>
-          <Text color="gray" fontSize="small" alignSelf="center">
+          <Text color="gray" fontSize="small" alignSelf="center" ml={"10%"}>
             Apr 2022
           </Text>
         </Flex>

@@ -6,7 +6,12 @@ import MyCards from "../components/MyCards";
 
 const Dashboard = () => {
   return (
-    <Flex h="100vh" flexDir="row" overflow="hidden" maxW="2000px">
+    <Flex
+      h={[null, null, "100vh", "100vh", "100vh"]}
+      flexDir={["column", "column", "row", "row", "row"]}
+      overflow={["auto", "auto", "hidden", "hidden", "hidden"]}
+      maxW="2000px"
+    >
       {/* Column 1 */}
       <Navbar />
 
