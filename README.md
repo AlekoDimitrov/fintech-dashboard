@@ -1,6 +1,8 @@
 # fintech-dashboard (Monke.)
 This is my first Next.js & Chakra UI project. Check out the deployed version hosted on [Vercel](https://fintech-dashboard-b1c289cjv-alekodimitrov.vercel.app/)
 
+Design by [Taras Migulko](https://dribbble.com/shots/15640240-The-Rise-dashboard-activity/attachments/7432009?mode=media)
+
 ## Getting Started
 
 First, run the development server:
